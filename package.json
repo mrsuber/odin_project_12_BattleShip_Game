@@ -1,0 +1,19 @@
+{
+  "name": "odin_project_12_battleship_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrsuber/odin_project_12_BattleShip_Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrsuber/odin_project_12_BattleShip_Game/issues"
+  },
+  "homepage": "https://github.com/mrsuber/odin_project_12_BattleShip_Game#readme"
+}
