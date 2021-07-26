@@ -210,12 +210,18 @@ function drop(e) {
     // get the draggable element
     const id = e.dataTransfer.getData('text/plain');
     const draggable = document.getElementById(id);
-    console.log(e.target.parentElement)
-    console.log(draggable)
-    console.log(e.target.id)
+    console.log(id)
+    // console.log(e.target.id)
+    placeToPutWeaponId= e.target.id
     // add it to the drop target
-
-    e.target.appendChild(draggable);
+    const placeToPutWeapon = document.getElementById(placeToPutWeaponId)
+    if(id==="item"){
+      console.log("this is the battle ship i am working with")
+      for(let i=Number(placeToPutWeaponId);i<=Number(placeToPutWeaponId)+4;i++){
+        console.log(i)
+      }
+    }
+    placeToPutWeapon.appendChild(draggable);
 
     // display the draggable element
     draggable.classList.remove('hide');
