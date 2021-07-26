@@ -70,3 +70,81 @@ h1{
   padding: 0px;
   box-sizing: content-box;
 }
+
+
+.hide {
+    display: none;
+}
+.drag-over {
+    border: dashed 3px red !important;
+}
+.drop-targets {
+    /* display: flex; */
+    /* flex-direction: row;
+    justify-content: space-around;
+    align-items: center; */
+    margin: 20px 0;
+}
+
+
+
+.box {
+    height: 29px;
+    width: 150px;
+    border: solid 3px #ccc;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h6{
+	    margin-top: -10px;
+			margin-bottom:-10px;
+}
+
+.item {
+    height: 28px;
+		width: 140px;
+		border: 1px
+		solid white;
+    background-color: #F0DB4F;
+		cursor: pointer;
+}
+
+.item2 {
+    height: 28px;
+		width: 112px;
+		border: 1px
+		solid white;
+    background-color: #F0DB4F;
+		cursor: pointer;
+}
+
+.item3 {
+    height: 28px;
+		width: 84px;
+		border: 1px
+		solid white;
+    background-color: #F0DB4F;
+		cursor: pointer;
+}
+
+.item4 {
+    height: 28px;
+		width: 84px;
+		border: 1px
+		solid white;
+    background-color: #F0DB4F;
+		cursor: pointer;
+}
+
+
+.item5 {
+    height: 28px;
+		width: 56px;
+		border: 1px
+		solid white;
+    background-color: #F0DB4F;
+		cursor: pointer;
+}

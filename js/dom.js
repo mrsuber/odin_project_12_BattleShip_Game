@@ -25,20 +25,68 @@ function addDiv(numberOfDivsToCreate) {
 
 // change grid square color to red
 function changeColor() {
-    // this.style.backgroundColor = '#06bb3e';
+
     const hitColor = 'rgb(251 62 2)'
     const missColor = 'rgb(43 136 187)'
-  //   const randomR = Math.floor(Math.random() * 256);
-  // const randomG = Math.floor(Math.random() * 256);
-  // const randomB = Math.floor(Math.random() * 256);
+
   this.style.backgroundColor = missColor;
 }
 
 
 // clear grid + prompt for new grid size
-function clear() {
+function clear() {}
+button.addEventListener('click', clear);
 
+// implementing drag and drop
+/* draggable element */
+const item = document.querySelector('#item');
+
+item.addEventListener('dragstart', dragStart);
+
+function dragStart(e) {
+    e.dataTransfer.setData('text/plain', e.target.id);
+    setTimeout(() => {
+        e.target.classList.add('hide');
+    }, 0);
 }
 
-button.addEventListener('click', clear);
+
+/* drop targets */
+const boxes = document.querySelectorAll('.box');
+
+boxes.forEach(box => {
+    box.addEventListener('dragenter', dragEnter)
+    box.addEventListener('dragover', dragOver);
+    box.addEventListener('dragleave', dragLeave);
+    box.addEventListener('drop', drop);
+});
+
+
+function dragEnter(e) {
+    e.preventDefault();
+    e.target.classList.add('drag-over');
+}
+
+function dragOver(e) {
+    e.preventDefault();
+    e.target.classList.add('drag-over');
+}
+
+function dragLeave(e) {
+    e.target.classList.remove('drag-over');
+}
+
+function drop(e) {
+    e.target.classList.remove('drag-over');
+
+    // get the draggable element
+    const id = e.dataTransfer.getData('text/plain');
+    const draggable = document.getElementById(id);
+
+    // add it to the drop target
+    e.target.appendChild(draggable);
+
+    // display the draggable element
+    draggable.classList.remove('hide');
+}
 window.onload = addDiv(10); // on page load, create a 16 x 16 grid
