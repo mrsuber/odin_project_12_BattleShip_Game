@@ -217,9 +217,13 @@ function drop(e) {
     const placeToPutWeapon = document.getElementById(placeToPutWeaponId)
     if(id==="item"){
       console.log("this is the battle ship i am working with")
-      for(let i=Number(placeToPutWeaponId);i<=Number(placeToPutWeaponId)+4;i++){
-        console.log(i)
-      }
+      // let i=Number(placeToPutWeaponId)
+      //
+      //   document.getElementById(String(i)).appendChild(draggable)
+      //   document.getElementById(String(i+1)).appendChild(draggable)
+      //   document.getElementById(String(i+2)).appendChild(draggable)
+      //   document.getElementById(String(i+3)).appendChild(draggable)
+
     }
     placeToPutWeapon.appendChild(draggable);
 
